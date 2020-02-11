@@ -20,7 +20,6 @@ class LoadSubreddit extends React.Component {
   onSubmit = e => {
     e.preventDefault()
     this.props.dispatch(fetchPosts(this.state.source))
-  
   }
   
 
@@ -37,8 +36,6 @@ class LoadSubreddit extends React.Component {
           />
           <button type='submit'>Fetch Posts</button>
         </form>
-
-        {/* {children} */}
       </div>
     )
   }
