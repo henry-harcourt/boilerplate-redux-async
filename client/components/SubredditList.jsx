@@ -6,10 +6,13 @@ import Post from './Post'
 const Subreddit = ({subreddits}) => (
   <div>
     {subreddits.map((post, i) =>
+    <div>
+    {console.log(post)}
       <Post
         key={i}
-        title={post.title}
+        post={post}
       />
+      </div>
     )}
   </div>
 )
@@ -20,6 +23,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(
-  mapStateToProps
-)(Subreddit)
+export default connect(mapStateToProps)(Subreddit)

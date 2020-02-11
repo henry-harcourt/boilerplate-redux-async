@@ -9,7 +9,8 @@ const App = () => (
   <div className='app'>
     <ErrorMessage />
     <LoadSubreddit>
-      <WaitIndicator />
+      <WaitIndicator /> 
+      {/* child prop */}
     </LoadSubreddit>
     <SubredditList />
   </div>

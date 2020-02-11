@@ -28,7 +28,7 @@ export function fetchPosts (subreddit) {
   return (dispatch) => {
     dispatch(requestPosts())
     return request
-      .get(`/api/v1/reddit/subreddit/${subreddit}`)
+      .get(`/api/v1/reddit/subreddit/${subreddit}`)// $ changes to js land
       .then(res => {
         dispatch(receivePosts(res.body))
       })
