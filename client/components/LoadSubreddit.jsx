@@ -16,12 +16,12 @@ class LoadSubreddit extends React.Component {
     })
   }
   
-  
   render() {
     return (
   
 
   <div>
+    <h1>Who got the Thunk?!</h1>
     <input type="text" name="subreddit" value={this.state.subreddit} onChange={this.handleChange} />
 
     <button onClick={() => this.props.dispatch(fetchPosts(this.state.subreddit))}>
