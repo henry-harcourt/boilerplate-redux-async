@@ -4,6 +4,8 @@ export const SHOW_ERROR = 'SHOW_ERROR'
 export const RECEIVE_POSTS = 'RECEIVE_POSTS'
 export const REQUEST_POSTS = 'REQUEST_POSTS'
 
+export const CHOOSE_SUB = 'CHOOSE_SUB'
+
 export const requestPosts = () => {
   return {
     type: REQUEST_POSTS
