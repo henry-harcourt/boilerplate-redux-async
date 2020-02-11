@@ -3,12 +3,13 @@ import {connect} from 'react-redux'
 
 import Post from './Post'
 
-const Subreddit = ({subreddits}) => (
+const Subreddit = (props) => (
   <div>
-    {subreddits.map((post, i) =>
+    {props.subreddits.map((post, i) =>
       <Post
         key={i}
         title={post.title}
+        date={post.created_utc}
       />
     )}
   </div>
