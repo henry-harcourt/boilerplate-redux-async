@@ -17,13 +17,9 @@ class LoadSubreddit extends React.Component {
     })
   }
 
-  handleSubmit = e => {
-    e.preventDefault()
-  }
-
   onSubmit = e => {
     e.preventDefault()
-    this.props.dispatch(fetchPosts(this.state.subreddit))
+    this.props.dispatch(fetchPosts(this.state.source))
   
   }
   
@@ -31,19 +27,17 @@ class LoadSubreddit extends React.Component {
   render() {
     return (
       <div>
-        <h1>Search for SubReddit</h1>
-        <form onSubmit={this.handleSubmit}>
+        <h2>Search for SubReddits</h2>
+        <form onSubmit={this.onSubmit}>
           <input
             type='text'
             name='source'
             value={this.state.name}
             onChange={this.handleChange}
           />
+          <button type='submit'>Fetch Posts</button>
         </form>
 
-        <button onClick={() => this.props.dispatch(fetchPosts('newzealand'))}>
-          Fetch Posts
-        </button>
         {/* {children} */}
       </div>
     )
