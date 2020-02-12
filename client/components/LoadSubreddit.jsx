@@ -1,10 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchPosts } from '../actions'
+import { fetchPosts, fetchQuotes } from '../actions'
 
 class LoadSubreddit extends React.Component {
   constructor(props) {
     super(props)
+    console.log(props)
 
     this.state = {
       subreddits: ''
@@ -21,12 +22,18 @@ class LoadSubreddit extends React.Component {
   onSubmit = (e) => {
     e.preventDefault()
     this.props.dispatch((fetchPosts(this.state.subreddits)))
+  } // 
+
+
+  componentDidMount() {
+    // this.props.dispatch((fetchQuotes())) // do i need this??
   }
 
 
   render() {
     return (
       <div>
+        <h2>Search through the nonsense of reddit</h2>
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
@@ -37,6 +44,8 @@ class LoadSubreddit extends React.Component {
           <input type= "submit"/>
         </form>
 
+      <p>{this.props.quote}</p>
+
         {this.props.children}
         {/*  puts the wait indicator underneath the form*/}
       </div>
@@ -46,7 +55,8 @@ class LoadSubreddit extends React.Component {
 
   const mapStateToProps = (state) => {
     return {
-      subreddits: state.subreddits
+      subreddits: state.subreddits,
+      quote: state.quote
     }
   }
 
@@ -54,6 +64,3 @@ class LoadSubreddit extends React.Component {
 export default connect(mapStateToProps)(LoadSubreddit)
 
 
-// change view to title, date, article preview
-
-// new reducer loadSubreddits

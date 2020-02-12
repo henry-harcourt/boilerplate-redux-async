@@ -5,6 +5,9 @@ import Post from './Post'
 
 const Subreddit = ({subreddits}) => (
   <div>
+    
+   
+
     {subreddits.map((post, i) =>
     <div>
     {console.log(post)}
