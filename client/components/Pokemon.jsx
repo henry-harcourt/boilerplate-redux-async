@@ -1,10 +1,10 @@
 
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchPosts} from '../actions'
+import {fetchPoke} from '../actions'
 
 
-class LoadSubreddit extends React.Component {
+class Pokemon extends React.Component {
   constructor(props) {
     super(props)
     this.state = {} 
@@ -19,7 +19,7 @@ class LoadSubreddit extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    this.props.dispatch(fetchPosts(this.state.value))
+    this.props.dispatch(fetchPoke(this.state.value))
   }
 
   render() {
@@ -29,7 +29,7 @@ class LoadSubreddit extends React.Component {
     {this.props.children}
     <form onSubmit={this.handleSubmit}>
       <label>
-        Enter a subreddit: 
+        Enter a Pokemon: 
       <input type="text" value={this.state.value} onChange={this.handleChange}/>
       </label>
       <input type="submit" value="Submit" />
@@ -41,8 +41,9 @@ class LoadSubreddit extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    subreddits: state.subreddits
+    pokemon: state.pokemon
   }
 }
 
-export default connect(mapStateToProps)(LoadSubreddit)
+export default connect(mapStateToProps)(Pokemon)
+
