@@ -1,11 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchPosts } from '../actions'
-class LoadSubreddit extends React.Component {
+
+
+class Am extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      sub: ""
+      search: ""
     }
   }
   handleChange = (e) => {
@@ -21,7 +22,7 @@ class LoadSubreddit extends React.Component {
       <div>
         <label>new subreddit</label> <br />
       
-        <input type="text" name="sub" onChange={this.handleChange}></input>
+        <input type="text" name="search" onChange={this.handleChange}></input>
         <button onClick={() => { dispatch(fetchPosts(this.state.sub)) }}>
           Fetch Posts
         </button>
@@ -32,4 +33,4 @@ class LoadSubreddit extends React.Component {
   }
 }
 
-export default connect()(LoadSubreddit)
+export default connect()(Am)

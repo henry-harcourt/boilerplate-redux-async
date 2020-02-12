@@ -4,6 +4,8 @@ import ErrorMessage from './ErrorMessage'
 import LoadSubreddit from './LoadSubreddit'
 import SubredditList from './SubredditList'
 import WaitIndicator from './WaitIndicator'
+import Am from './Am'
+
 
 const App = () => (
   <div className='app'>
@@ -12,6 +14,7 @@ const App = () => (
       <WaitIndicator />
     </LoadSubreddit>
     <SubredditList />
+    <Am />
   </div>
 )
 
