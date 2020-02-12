@@ -9,7 +9,6 @@ class LoadSubreddit extends React.Component {
 
     this.state = {
       subreddit: '',
-      date: ''
     }
   }
 
@@ -17,33 +16,26 @@ class LoadSubreddit extends React.Component {
     this.setState({
       [e.target.name]: e.target.value
     })
-
   }
-
 
   render() {
     return (
       <div>
-        <input type="text"
-          name="subreddit"
-          value={this.state.subreddit}
-          onChange={this.handleChange} />
 
-        <button onClick={() => this.props.dispatch(fetchPosts(this.state.subreddit))}> Fetch Posts
-    </button>
+        <input 
+        type="text" 
+        name="subreddit" 
+        value={this.state.subreddit} 
+        onChange={this.handleChange} 
+        />
+
+        <button onClick={() => this.props.dispatch(fetchPosts(this.state.subreddit))}>Fetch Posts</button>
+        
         {this.props.children}
+
       </div>
     )
   }
 }
-// const LoadSubreddit = ({ children, dispatch }) => (
-//   <div>
-//     <input type="text" />
-//     <button onClick={() => dispatch(fetchPosts("banana"))}>
-//       Fetch Posts
-//     </button>
-//     {children}
-//   </div>
-// )
 
 export default connect()(LoadSubreddit)
