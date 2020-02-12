@@ -1,5 +1,5 @@
 import React from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 import Post from './Post'
 
@@ -9,7 +9,8 @@ const Subreddit = (props) => (
       <Post
         key={i}
         title={post.title}
-        date={post.created_utc}
+        date={(new Date(post.created_utc * 1000)).toString()}
+        summary={post.selftext}
       />
     )}
   </div>
