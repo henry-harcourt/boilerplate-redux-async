@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Post = ({title}) => (
+const Post = ({title, date, summary}) => (
   <div>
   <div>{title}</div>
-  <div>{created_utc}</div>
+  <div>{date}</div>
+  <div>{summary}</div>
   </div>
 )
 
