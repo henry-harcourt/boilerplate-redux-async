@@ -14,15 +14,21 @@ class App extends React.Component {
     }
   }
 
+
+
+  // ------ this onClick function takes the isHyper parameter from the const below which uses a ternery operator to 
+  // be able to recognise the switching state / query betweeen low and high (query is determined in the router by 
+  // db function). -------
+
   handleActivityClick = (isHyper) => {
     const intensity = isHyper ? 'high' : 'low'
     getActivitiesFromApi(intensity)
-    .then(whateverIsReturnedFromFunction => {
-      let randomAct = Math.floor(Math.random()*whateverIsReturnedFromFunction.length)
-      this.setState({
-        activity: whateverIsReturnedFromFunction[randomAct]
+      .then(whateverIsReturnedFromFunction => {
+        let randomAct = Math.floor(Math.random() * whateverIsReturnedFromFunction.length)
+        this.setState({
+          activity: whateverIsReturnedFromFunction[randomAct]
+        })
       })
-    })
   }
 
 
@@ -42,14 +48,14 @@ class App extends React.Component {
   //   })
   // }
 
-  
+
   render() {
     return (
       <div className='app'>
         <h1>Hello World</h1>
-        <Activity activity = {this.state.activity.title}/>
-        <Buttons clickThing = {this.handleActivityClick} clickHyper = {this.handleMoodClick}/>
-        
+        <Activity activity={this.state.activity.title} />
+        <Buttons clickThing={this.handleActivityClick} clickHyper={this.handleMoodClick} />
+
       </div>
     )
   }

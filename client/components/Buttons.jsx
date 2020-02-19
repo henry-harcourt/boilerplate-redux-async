@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 class Buttons extends React.Component {
     constructor(props) {
@@ -10,9 +11,9 @@ class Buttons extends React.Component {
     }
 
 
-    // ----- ! will change the value to opposite of current value
+    // ------ the ! in this handleClick function will change the value to opposite of current value
     // i.e. it is changeable from its value at the time it is called on
-    // - only works with booleans -----
+    // - only works with booleans (true or false value properties)-----
     handleHyperClick = () => {
         this.setState({
             isHyper: !this.state.isHyper
@@ -43,4 +44,9 @@ class Buttons extends React.Component {
     }
 }
 
+// function mapStateToProps (globalState) {
+//     return {
+
+//     }
+// }
 export default Buttons

@@ -1,4 +1,13 @@
-// import request from 'superagent'
+import request from 'superagent'
+
+
+export const requestActivity = () => {
+    return {
+        type: REQUEST_ACTIVITY
+    }
+}
+
+
 
 // export const SHOW_ERROR = 'SHOW_ERROR'
 // export const RECEIVE_POSTS = 'RECEIVE_POSTS'
