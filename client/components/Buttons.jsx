@@ -44,9 +44,9 @@ class Buttons extends React.Component {
     }
 }
 
-// function mapStateToProps (globalState) {
-//     return {
-
-//     }
-// }
+function mapStateToProps (globalState) {
+    return {
+        
+    }
+}
 export default Buttons

@@ -54,7 +54,7 @@ class App extends React.Component {
       <div className='app'>
         <h1>Hello World</h1>
         <Activity activity={this.state.activity.title} />
-        <Buttons clickThing={this.handleActivityClick} clickHyper={this.handleMoodClick} />
+        <Buttons clickThing={this.handleActivityClick} />
 
       </div>
     )

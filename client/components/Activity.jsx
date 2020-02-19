@@ -5,7 +5,9 @@ class Activity extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {}
+        this.state = {
+            activity: {}
+        }
     }
 
     render() {
@@ -13,6 +15,7 @@ class Activity extends React.Component {
         return(
             <div>
                 <h2>{this.props.activity}</h2>
+        
             </div>
         )
     }

@@ -1,8 +1,8 @@
-import {REQUEST_ACTIVITY} from '../actions/index'
+import {SWITCH_INTENSITY} from '../actions/index'
 
-function doSomeActivities (state = [], action) {
+function switchIntensity (state = {}, action) {
     switch (action.type) {
-        case REQUEST_ACTIVITY:
+        case SWITCH_INTENSITY:
             return action.activities
 
         default: 
@@ -10,4 +10,4 @@ function doSomeActivities (state = [], action) {
     }
 }
 
-export default doSomeActivities
+export default switchIntensity

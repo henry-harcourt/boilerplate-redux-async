@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
-import doSomeActivities from './activities'
+import switchIntensity from './activities'
 
 export default combineReducers({
-    doSomeActivities,
+    switchIntensity,
 })

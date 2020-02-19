@@ -1,9 +1,9 @@
 import request from 'superagent'
 
 
-export const requestActivity = () => {
+export const switchIntensity = () => {
     return {
-        type: REQUEST_ACTIVITY
+        type: SWITCH_INTENSITY
     }
 }
 
