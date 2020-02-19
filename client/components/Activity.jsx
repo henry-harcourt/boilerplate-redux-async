@@ -9,7 +9,7 @@ class Activity extends React.Component {
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return(
             <div>
                 <h2>{this.props.activity}</h2>

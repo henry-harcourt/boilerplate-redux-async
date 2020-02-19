@@ -4,11 +4,11 @@ const db = require ('./db')
 
 const router = express.Router()
 
-router.use(express.json())
+
 
 router.get('/', (req, res) => {
-
-  db.getActivity()
+  console.log(req.query) // ----- outputs to terminal (or look under Network in dev tools) the current state - high or low intensity
+  db.getActivity(req.query.intensity)
   .then(activity => {
     res.json(activity)
   })
