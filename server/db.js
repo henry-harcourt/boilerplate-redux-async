@@ -12,16 +12,7 @@ function getActivity (intensity, db = connection) {
     .select()
 }
 
-// ----- secondary function - dont need, may delete ------
-
-function getActivityIntensity (db = connection) {
-    return db('activities')
-    .select('title')
-    .where({intensity: 'Low'})
-
-}
 
 module.exports = {
     getActivity,
-    getActivityIntensity
 }

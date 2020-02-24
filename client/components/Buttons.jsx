@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { fetchData } from '../actions'
 
 class Buttons extends React.Component {
     constructor(props) {
@@ -18,35 +19,34 @@ class Buttons extends React.Component {
         this.setState({
             isHyper: !this.state.isHyper
         })
-    }
+    } 
 
 
     render() {
+        
 
         const isHyper = this.state.isHyper;
         let button;
+
 
         if (isHyper) {
             button = <button onClick={this.handleHyperClick}>I'M TOO FUCKING LAZY</button>
         } else {
             button = <button onClick={this.handleHyperClick}>I'M HYPER AS FUCK</button>
         }
-
         return (
 
             <div>
-                <button onClick={() => {
-                    this.props.clickThing(this.state.isHyper)
-                }}>I'M NOT FUCKING DOING THAT</button>
+                <button onClick={() => this.props.dispatch(fetchData('high'))}>I'M NOT FUCKING DOING THAT</button>
                 {button}
             </div>
         )
     }
 }
 
-function mapStateToProps (globalState) {
-    return {
-        
-    }
-}
-export default Buttons
+
+
+export default connect()(Buttons)
+
+// old OnCLick
+// this.props.clickThing(this.state.isHyper)

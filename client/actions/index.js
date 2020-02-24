@@ -1,48 +1,24 @@
 import request from 'superagent'
 
 
-export const switchIntensity = () => {
+export const RECEIVE_DATA = 'RECEIVE_DATA'
+export const GET_ACTIVITY = 'GET_ACTIVITY'
+
+
+export const receiveData = (data) => {
     return {
-        type: SWITCH_INTENSITY
+        type: RECEIVE_DATA,
+        data: data
     }
 }
 
 
-
-// export const SHOW_ERROR = 'SHOW_ERROR'
-// export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-// export const REQUEST_POSTS = 'REQUEST_POSTS'
-
-// export const requestPosts = () => {
-//   return {
-//     type: REQUEST_POSTS
-//   }
-// }
-
-// export const receivePosts = (posts) => {
-//   return {
-//     type: RECEIVE_POSTS,
-//     posts: posts.map(post => post.data)
-//   }
-// }
-
-// export const showError = (errorMessage) => {
-//   return {
-//     type: SHOW_ERROR,
-//     errorMessage: errorMessage
-//   }
-// }
-
-// export function fetchPosts (subreddit) {
-//   return (dispatch) => {
-//     dispatch(requestPosts())
-//     return request
-//       .get(`/api/v1/reddit/subreddit/${subreddit}`)
-//       .then(res => {
-//         dispatch(receivePosts(res.body))
-//       })
-//       .catch(err => {
-//         dispatch(showError(err.message))
-//       })
-//   }
-// }
+export function fetchData (intensity) {
+    return (dispatch) => {
+        return request
+        .get('/api/v1/activities?intensity=' + intensity)
+        .then(res => {
+            dispatch(receiveData(res.body))
+        })
+    }
+}

@@ -1,13 +1,13 @@
-import {SWITCH_INTENSITY} from '../actions/index'
+import { RECEIVE_DATA } from '../actions/index'
 
-function switchIntensity (state = {}, action) {
+function getDataPls (state = [], action) {
     switch (action.type) {
-        case SWITCH_INTENSITY:
-            return action.activities
+        case RECEIVE_DATA:
+            return action.data
 
         default: 
             return state
     }
 }
 
-export default switchIntensity
+export default getDataPls

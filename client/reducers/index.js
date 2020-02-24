@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
-import switchIntensity from './activities'
+import getDataPls from './activities'
 
 export default combineReducers({
-    switchIntensity,
+    getDataPls
 })
