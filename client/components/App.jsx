@@ -3,6 +3,7 @@ import Activity from './Activity'
 import Buttons from './Buttons'
 import { connect } from 'react-redux'
 import { fetchData } from '../actions/index'
+// import { Router } from 'react-router-dom'
 
 
 class App extends React.Component {
@@ -12,14 +13,17 @@ class App extends React.Component {
   }
 
   render() {
-    
-    return (
-      <div className='app'>
-        <h1>Hello World</h1>
-        <Activity />
-        <Buttons />
 
-      </div>
+    return (
+
+      // <Router>
+        <div className='app'>
+
+          <Activity />
+          <Buttons />
+
+        </div>
+      // </Router> 
     )
   }
 }

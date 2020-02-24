@@ -7,6 +7,7 @@ class Activity extends React.Component {
 
         return(
             <div>
+                
                 <h2>{this.props.activity.title}</h2>
         
             </div>
