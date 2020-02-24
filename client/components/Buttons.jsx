@@ -11,10 +11,6 @@ class Buttons extends React.Component {
             }
     }
 
-
-    // ------ the ! in this handleClick function will change the value to opposite of current value
-    // i.e. it is changeable from its value at the time it is called on
-    // - only works with booleans (true or false value properties)-----
     handleHyperClick = () => {
         this.setState({
             isHyper: !this.state.isHyper
@@ -27,17 +23,19 @@ class Buttons extends React.Component {
 
         const isHyper = this.state.isHyper;
         let button;
-
+        let intensity = ''
 
         if (isHyper) {
             button = <button onClick={this.handleHyperClick}>I'M TOO FUCKING LAZY</button>
+            intensity = 'high'
         } else {
             button = <button onClick={this.handleHyperClick}>I'M HYPER AS FUCK</button>
+            intensity = 'low'
         }
         return (
 
             <div>
-                <button onClick={() => this.props.dispatch(fetchData('high'))}>I'M NOT FUCKING DOING THAT</button>
+                <button onClick={() => this.props.dispatch(fetchData(intensity))}>I'M NOT FUCKING DOING THAT</button>
                 {button}
             </div>
         )
@@ -47,6 +45,3 @@ class Buttons extends React.Component {
 
 
 export default connect()(Buttons)
-
-// old OnCLick
-// this.props.clickThing(this.state.isHyper)

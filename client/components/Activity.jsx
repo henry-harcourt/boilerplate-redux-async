@@ -1,24 +1,24 @@
 import React from 'react'
-// import { combineReducers } from 'redux'
+import { connect } from 'react-redux'
 
 class Activity extends React.Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            activity: {}
-        }
-    }
 
     render() {
-        // console.log(this.props)
+
         return(
             <div>
-                <h2>{this.props.activity}</h2>
+                <h2>{this.props.activity.title}</h2>
         
             </div>
         )
     }
 }
 
-export default Activity
+function mapStateToProps(globalState) {
+ 
+    return {
+        activity: globalState.getDataPls
+    }
+  }
+
+export default connect(mapStateToProps)(Activity)
