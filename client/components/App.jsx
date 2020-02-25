@@ -17,12 +17,12 @@ class App extends React.Component {
     return (
 
       // <Router>
-        <div className='mainees'>
+      <div className='mainees'>
 
-          <Activity />
-          <Buttons />
+        <Activity />
+        <Buttons />
 
-        </div>
+      </div>
       // </Router> 
     )
   }
