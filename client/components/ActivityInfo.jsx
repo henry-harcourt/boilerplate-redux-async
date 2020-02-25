@@ -1,9 +1,9 @@
 import React  from 'react'
 
-function ActivityInfo (){
+function ActivityInfo (props) {
   return(
     <div>
-      
+      <h2>props.activity.</h2>
     </div>
   )
 }

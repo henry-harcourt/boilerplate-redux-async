@@ -1,10 +1,17 @@
-.error {
-  color: red;
-  font-weight: bold;
+body. {
+
 }
 
-.wait-indicator {
-  position: absolute;
-  margin-left: 5px;
-  width: 20px;
+.mainees {
+  text-align: center;
+  margin: 100px 150px
+}
+
+.images {
+  width: auto;
+  height: 400px;
+}
+
+.buttons {
+  
 }

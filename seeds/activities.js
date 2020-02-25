@@ -18,7 +18,7 @@ exports.seed = function(knex) {
           title: 'Build an App Using Redux and Thunk',
           address: '275 Cuba Street, Te Aro',
           info: 'Redux is a State Management library for React apps. It manages the state of the app in a single object.',
-          img: './public/images/code.png',
+          img: 'https://miro.medium.com/max/312/1*SRL22ADht1NU4LXUeU4YVg.png',
           intensity: 'high'
       },
       {

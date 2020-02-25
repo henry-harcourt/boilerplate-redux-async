@@ -9,6 +9,8 @@ class Activity extends React.Component {
             <div>
                 
                 <h2>{this.props.activity.title}</h2>
+                <img className='images' src={this.props.activity.img} alt="img"/>
+                <p>{this.props.activity.info}</p>
         
             </div>
         )

@@ -17,7 +17,7 @@ class App extends React.Component {
     return (
 
       // <Router>
-        <div className='app'>
+        <div className='mainees'>
 
           <Activity />
           <Buttons />
