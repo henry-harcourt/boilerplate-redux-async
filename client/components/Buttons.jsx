@@ -26,16 +26,16 @@ class Buttons extends React.Component {
         let intensity = ''
     
         if (isHyper) {
-            button = <button className='buttons bouncy' onClick={this.handleHyperClick}>I'M TOO FUCKING LAZY</button>
+            button = <button className='buttons bouncy' onClick={this.handleHyperClick}>I'M TOO LAZY</button>
             intensity = 'high'
         } else {
-            button = <button className='buttons bouncy' onClick={this.handleHyperClick}>I'M HYPER AS FUCK</button>
+            button = <button className='buttons bouncy' onClick={this.handleHyperClick}>I'M FEELING HYPER</button>
             intensity = 'low'
         }
         return (
 
             <div>
-                <button className='buttons bouncy' onClick={() => this.props.dispatch(fetchData(intensity))}>I'M NOT FUCKING DOING THAT</button>
+                <button className='buttons bouncy' onClick={() => this.props.dispatch(fetchData(intensity))}>I'M NOT DOING THAT</button>
                 {button}
             </div>
         )
